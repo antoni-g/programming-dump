@@ -1,5 +1,11 @@
 import sys
 
+# 						11.8.18									#
+#																#
+# This script was written to help manually debug a convex hull  #
+# implementation using the Graham Scan Method.					#
+#																#
+
 # processes args
 def process_args(args):
 	points = []
