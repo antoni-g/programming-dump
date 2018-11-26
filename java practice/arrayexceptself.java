@@ -14,7 +14,6 @@ class Solution {
         out[nums.length-1] = left;
         return out;
     }
-    
 }
 
 public class arrayexceptself {
