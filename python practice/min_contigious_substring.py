@@ -55,8 +55,7 @@ def max_substring(s,t):
 	# construct return string
 	ret = ""
 	if final_start > -1:
-		for j in range(final_start, final_start+final_length):
-			ret += s[j]
+		ret = counstruct_substring(s,final_start,final_length)
 	return ret
 
 def min_substring(s,t):
@@ -123,8 +122,7 @@ def min_substring(s,t):
 	# construct return string
 	ret = ""
 	if final_start > -1:
-		for j in range(final_start, final_start+final_length):
-			ret += s[j]
+		ret = counstruct_substring(s,final_start,final_length)
 	return ret
 
 # helper that lowercases chars
@@ -133,7 +131,7 @@ def helper_ord(c):
 
 # helper that constructs a substring from an substring, start index, and length
 def counstruct_substring(string,start,length):
-	if length > 0 and start+length-1 < len(string):
+	if start+length-1 < len(string):
 		ret = ""
 		for i in range(start,start+length):
 			ret += string[i]
@@ -145,14 +143,15 @@ print('*** max function: ***')
 print(max_substring('I have a friend that went to UPenn!','dtah'))
 print(max_substring('I have a friend that went to UPenn dddttthhhaaattaaatthh!','dtah'))
 print(max_substring('aardvarks are bad', 'vard'))
+print(max_substring('aaaaaaa','a'))
 print(max_substring('abd','bdgw'))
 print(max_substring('a','a'))
-print(max_substring('aaaaaaa','a'))
 print(max_substring('wdwa',''))
 print(max_substring('','hduw'))
 print()
 print('*** min function: ***')
 print(min_substring('I have a friend that went to UPenn!','dtah'))
+print(min_substring('I have a friend that went to UPenn dddttthhhaaattaaatthh!','dtah'))
 print(min_substring('feeaabcdate', 'abdc'))
 print(min_substring('aardvarks are bad', 'vard'))
 print(min_substring('abd','bdgw'))
@@ -160,3 +159,5 @@ print(min_substring('a','a'))
 print(min_substring('aaaaaaa','a'))
 print(min_substring('wdwa',''))
 print(min_substring('','hduw'))
+
+
