@@ -1,3 +1,4 @@
+
 # find pairs in the input collection of integers
 # that have an exact difference
 # inputs:
