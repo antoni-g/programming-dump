@@ -5,6 +5,7 @@
 #		- integer absolute difference
 # ouput:
 #		- count of pairs
+
 def find_pairs(nums,k):
 	lookup = {}
     for i in nums:
