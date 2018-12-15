@@ -5,7 +5,9 @@ class Solution:
         :type nums2: List[int]
         :rtype: float
         """
-        out = []
+        if nums1[len(nums1)-1] < nums2[0]:
+        	pass
+        pass
 
     def bruteForce(self,nums1,nums2):
     	nums1.extend(nums2)
